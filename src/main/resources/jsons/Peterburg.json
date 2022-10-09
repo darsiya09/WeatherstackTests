@@ -1,0 +1,41 @@
+{
+  "request": {
+    "type": "City",
+    "query": "Peterburg, Russia",
+    "language": "en",
+    "unit": "m"
+  },
+  "location": {
+    "name": "Peterburg",
+    "country": "Russia",
+    "region": "Saint Petersburg City",
+    "lat": "59.894",
+    "lon": "30.264",
+    "timezone_id": "Europe/Moscow",
+    "localtime": "2022-10-08 14:24",
+    "localtime_epoch": 1665239040,
+    "utc_offset": "3.0"
+  },
+  "current": {
+    "observation_time": "11:24 AM",
+    "temperature": 14,
+    "weather_code": 116,
+    "weather_icons": [
+      "https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png"
+    ],
+    "weather_descriptions": [
+      "Partly cloudy"
+    ],
+    "wind_speed": 30,
+    "wind_degree": 220,
+    "wind_dir": "SW",
+    "pressure": 1008,
+    "precip": 0,
+    "humidity": 55,
+    "cloudcover": 75,
+    "feelslike": 12,
+    "uv_index": 4,
+    "visibility": 10,
+    "is_day": "yes"
+  }
+}
