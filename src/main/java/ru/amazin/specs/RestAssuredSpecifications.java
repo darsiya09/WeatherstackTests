@@ -1,5 +1,6 @@
 package ru.amazin.specs;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -27,7 +28,7 @@ public class RestAssuredSpecifications {
                 .log(LogDetail.BODY)
                 .setBaseUri(propertyReader.getProperty("url"))
                 .setContentType(ContentType.JSON)
-                // .addFilter(new AllureRestAssured())
+                .addFilter(new AllureRestAssured())
                 .build();
     }
 
