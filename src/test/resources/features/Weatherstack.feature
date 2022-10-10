@@ -10,6 +10,7 @@ Feature: Weatherstack API tests
       | Peterburg |
       | Moscow    |
       | Tbilisi   |
+      | Ryazan    |
 
   @negative
   Scenario: Getting error 101 - missing_access_key
