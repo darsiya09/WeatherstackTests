@@ -14,21 +14,17 @@ public class RestAssuredSpecifications {
     private static final RestAssuredSpecifications instance = new RestAssuredSpecifications();
 
     private final PropertiesReader propertyReader = PropertiesReader.getInstance();
-    private final RequestSpecBuilder requestSpecBuilder;
-    private final ResponseSpecBuilder respSpecBuilder;
 
     public static RestAssuredSpecifications getInstance() {
         return instance;
     }
 
     private RestAssuredSpecifications() {
-        this.requestSpecBuilder = new RequestSpecBuilder();
-        this.respSpecBuilder = new ResponseSpecBuilder();
     }
 
     public RequestSpecification getReqSpec() {
 
-        return requestSpecBuilder
+        return new RequestSpecBuilder()
                 .log(LogDetail.BODY)
                 .setBaseUri(propertyReader.getProperty("url"))
                 .setContentType(ContentType.JSON)
@@ -37,7 +33,7 @@ public class RestAssuredSpecifications {
     }
 
     public ResponseSpecification getResSpec(int expectedStatusCode) {
-        return respSpecBuilder
+        return new ResponseSpecBuilder()
                 .log(LogDetail.BODY)
                 .expectStatusCode(expectedStatusCode)
                 .build();
